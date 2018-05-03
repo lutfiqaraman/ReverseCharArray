@@ -10,6 +10,38 @@ namespace ReverseNumber
     {
         static void Main(string[] args)
         {
+            char[] a = { 'a', 'b', 'c', 'd' };
+
+            Console.WriteLine("Before reverse:");
+       
+            for (int o = 0; o < a.Length; o++)
+            {
+                Console.Write(a[o] + "\t");
+            }
+
+            int i = 0;
+            int j = a.Length - 1;
+            char temp;
+
+            while(i < j)
+            {
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+
+                i++;
+                j--;
+             }
+
+            Console.WriteLine();
+            Console.WriteLine("After reverse:");
+
+            for (int m = 0; m < a.Length; m++)
+            {
+                Console.Write(a[m] + "\t");
+            }
+
+            Console.ReadKey();
         }
     }
 }
